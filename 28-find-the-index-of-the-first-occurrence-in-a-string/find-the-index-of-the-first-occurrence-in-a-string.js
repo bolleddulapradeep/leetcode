@@ -4,7 +4,9 @@
  * @return {number}
  */
 var strStr = function(haystack, needle) {
-     const hay = haystack.replaceAll(needle, 0)
-    const index = String(hay).indexOf(0)
-    return index
+    //  const hay = haystack.replaceAll(needle, 0)
+    // const index = String(hay).indexOf(0)
+    // return index
+
+    return haystack.indexOf(needle)
 };
