@@ -15,7 +15,6 @@ var differenceOfSum = function(nums) {
         if (nums[i] > 9) {
             while (nums[i] > 0) {
                 const rem = nums[i] % 10;
-                console.log('nums[i]', nums[i], rem)
                 nums[i] = Math.floor(nums[i] / 10);
                 outerSum += rem;
             }
