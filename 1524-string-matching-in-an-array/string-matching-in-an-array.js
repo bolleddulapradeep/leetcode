@@ -13,6 +13,4 @@ var stringMatching = function(words) {
     }
 
     return word
-
-    return words.filter((el) => words.some((v) => v !== el && v.includes(el)))
 };
