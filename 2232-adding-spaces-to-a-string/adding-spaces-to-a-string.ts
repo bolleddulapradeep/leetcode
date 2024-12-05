@@ -10,8 +10,8 @@ function addSpaces(s: string, spaces: number[]): string {
 
     for (let i = 0; i < spaces.length; i++) {
         while (str < spaces[i]) {
-        stringValue += s[str];
-        str++;
+            stringValue += s[str];
+            str++;
         }
         stringValue += " ";
     }
