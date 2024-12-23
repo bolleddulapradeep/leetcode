@@ -1,5 +1,4 @@
 function intersection(nums: number[][]): number[] {
-//    if (nums.length < 2) return [nums.sort((a,b) => a -)];
     if(!nums.length) return []
     const arr1 = [...new Set(nums[0])];
     return nums.slice(1).reduce(
