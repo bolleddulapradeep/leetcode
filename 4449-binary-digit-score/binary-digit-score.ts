@@ -1,29 +1,18 @@
-function toBinary(num: number): string {
-  let result = '';
+function countSetBits(num: number): number {
+  let count = 0;
+
   while (num > 0) {
-    result = (num % 2) + result;
-    num = Math.floor(num / 2)
+    num &= num - 1;
+    count++;
   }
 
-  return result;
+  return count;
 }
 
-function toNumber(num: string): number {
-  let result = 0;
-
-  for (let i = 0; i < num.length; i++) {
-    if (Number(num[i]) > 0) {
-      result = result + 1
-    }
-  }
-
-  return result;
-}
 
 function calculateScore(a: number, b: number): number {
-
-  const a1 = toNumber(toBinary(a));
-  const a2 = toNumber(toBinary(b));
+  const a1 = countSetBits(a);
+  const a2 = countSetBits(b);
 
   if (a1 >= a2) return a1 * a2;
 
